@@ -1,0 +1,23 @@
+buildscript {
+    apply from: "$rootDir/version.gradle"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$library.androidGradlePlugin"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$library.kotlin"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$library.hilt"
+    }
+
+    allprojects {
+        repositories {
+            google()
+            mavenCentral()
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

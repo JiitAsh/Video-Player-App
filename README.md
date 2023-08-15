@@ -1,4 +1,4 @@
-# AndroidVideoPlayer
+# Video Player App
 A video player app.
 
 ## Features
